@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Fuente1';
+    min-height: 100vh;
+    background: linear-gradient(45deg, rgb(138, 157, 212), #2ecc71);
+    animation: gradientAnimation 10s infinite alternate;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Asegura que el encabezado esté en la parte superior */
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+img {
+    max-height: 200px; /* Ajusta la altura máxima de la imagen */
+    margin-right: 450px; /* Ajusta el espacio entre la imagen y el texto */
+}
+
+h2 {
+    color: #252323;
+    margin: 0;
+    font-size: 1.5em; /* Tamaño de fuente más pequeño */
+}
+
+nav {
+    text-align: center;
+    color: #252323;
+    margin-right: 90px; /* Ajusta el margen derecho del nav */
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #252323;
+    font-weight: bold;
+    font-size: 0.8em; /* Tamaño de fuente más pequeño */
+}
+
+@font-face {
+    font-family: 'Fuente1';
+    src: url('Over There.ttf') format('truetype');
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    /* Media queries para dispositivos pequeños */
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        font-size: 1em; /* Ajusta el tamaño de fuente para dispositivos pequeños */
+    }
+
+    nav a {
+        font-size: 0.7em; /* Ajusta el tamaño de fuente para dispositivos pequeños */
+    }
+}
